@@ -8,3 +8,4 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     working_dir: /usr/src/app
+    command: go run main.go

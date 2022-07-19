@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 COPY ./src ./
 RUN go mod download && go mod verify
 
-COPY . .
-RUN go build -v -o /usr/local/bin/app ./...
+# build the program and create an executable called 'backend'
+RUN go build -v -o /usr/local/bin/backend ./...
 
-CMD ["app"]
+CMD ["backend"]
